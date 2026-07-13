@@ -1,0 +1,44 @@
+.register-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--bg-color);
+}
+
+.register-form{
+    width:420px;
+    background:var(--card-color);
+    padding:40px;
+    border-radius:12px;
+    border:1px solid var(--border-color);
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.register-form h1{
+    text-align:center;
+}
+
+.register-form input{
+    padding:14px;
+    border:1px solid var(--border-color);
+    border-radius:8px;
+    background:transparent;
+    color:var(--text-color);
+}
+
+.register-form button{
+    padding:14px;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.register-form p{
+    text-align:center;
+}

@@ -1,0 +1,13 @@
+:root {
+  --primary: #2563eb;
+
+  --success: #10b981;
+
+  --warning: #f59e0b;
+
+  --danger: #ef4444;
+
+  --radius: 14px;
+
+  --transition: 0.3s;
+}

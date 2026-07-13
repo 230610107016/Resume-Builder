@@ -1,0 +1,61 @@
+.theme-toggle{
+    width:72px;
+    height:38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--border-color);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 8px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.toggle-thumb{
+
+    position:absolute;
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:white;
+
+    top:5px;
+
+    left:5px;
+
+    transition:.3s;
+}
+
+.theme-toggle.dark .toggle-thumb{
+
+    transform:translateX(34px);
+
+}
+
+.sun-icon{
+
+    color:#f59e0b;
+
+}
+
+.moon-icon{
+
+    color:#6366f1;
+
+}

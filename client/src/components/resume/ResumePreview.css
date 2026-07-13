@@ -1,0 +1,117 @@
+.resume-preview {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background: #eef2f7;
+    overflow-y: auto;
+}
+
+.resume-paper {
+    width: 794px;
+    min-height: 1123px;
+    background: #ffffff;
+    color: #1f2937;
+
+    padding: 60px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.resume-paper:hover {
+    transform: translateY(-3px);
+}
+
+.resume-paper h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.resume-paper h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+.resume-paper h2 {
+    margin-top: 35px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #2563eb;
+    color: #111827;
+    font-size: 22px;
+}
+
+.resume-paper p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #374151;
+    word-break: break-word;
+}
+
+.resume-paper hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #d1d5db;
+}
+
+/* Scrollbar */
+
+.resume-preview::-webkit-scrollbar {
+    width: 8px;
+}
+
+.resume-preview::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 20px;
+}
+
+.resume-preview::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Tablet */
+
+@media (max-width: 1200px) {
+    .resume-preview {
+        padding: 20px;
+    }
+
+    .resume-paper {
+        width: 100%;
+        max-width: 794px;
+        padding: 40px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .resume-preview {
+        padding: 15px;
+    }
+
+    .resume-paper {
+        padding: 25px;
+    }
+
+    .resume-paper h1 {
+        font-size: 28px;
+    }
+
+    .resume-paper h3 {
+        font-size: 18px;
+    }
+
+    .resume-paper h2 {
+        font-size: 18px;
+    }
+}
