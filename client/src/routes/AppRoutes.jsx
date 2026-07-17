@@ -6,7 +6,7 @@ import Register from "../pages/Register/Register";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import ResumeBuilder from "../pages/ResumeBuilder/ResumeBuilder";
 // import ResumePreview from "../pages/ResumePreview/ResumePreview";
-// import Templates from "../pages/Templates/Temp";
+// import Templates from "../pages/Templates/Templates";
 // import MyResumes from "../pages/MyResumes/MyResumes";
 // import Profile from "../pages/Profile/Profile";
 import NotFound from "../pages/NotFound/NotFound";
@@ -15,7 +15,6 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
@@ -35,11 +34,9 @@ const AppRoutes = () => {
         {/* <Route path="/profile" element={<Profile />} /> */}
 
         <Route path="*" element={<NotFound />} />
-
       </Routes>
     </BrowserRouter>
   );
 };
 
 export default AppRoutes;
-

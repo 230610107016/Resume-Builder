@@ -1,5 +1,9 @@
 .resume-preview {
     display: flex;
+    top:95px;
+    align-self:start;
+    height:calc(100vh - 95px);
+    overflow-y:auto;
     justify-content: center;
     align-items: flex-start;
     padding: 40px;
@@ -7,19 +11,30 @@
     overflow-y: auto;
 }
 
+
 .resume-paper {
-    width: 794px;
-    min-height: 1123px;
-    background: #ffffff;
+
+    width: 210mm;
+
+    min-height: 297mm;
+
+    background: #fff;
+
+    margin: 0 auto;
+
+    padding: 18mm;
+
+    box-sizing: border-box;
+
     color: #1f2937;
 
-    padding: 60px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.15);
 
-    border-radius: 12px;
+    position: relative;
 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    overflow: visible;
 
-    transition: 0.3s;
+    line-height: 1.6;
 }
 
 .resume-paper:hover {
@@ -40,13 +55,20 @@
     margin-bottom: 25px;
 }
 
-.resume-paper h2 {
-    margin-top: 35px;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #2563eb;
-    color: #111827;
-    font-size: 22px;
+.resume-paper h2{
+
+    color:#2563eb;
+
+    font-size:22px;
+
+    margin-top:28px;
+
+    margin-bottom:16px;
+
+    padding-bottom:8px;
+
+    border-bottom:2px solid #2563eb;
+
 }
 
 .resume-paper p {
@@ -78,6 +100,196 @@
     background: transparent;
 }
 
+.education-item{
+
+    margin-bottom:24px;
+
+    page-break-inside:avoid;
+
+    break-inside:avoid;
+
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.education-header span {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.education-item h5 {
+    margin: 8px 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.education-item p {
+    margin: 4px 0;
+    color: #444;
+}
+
+.education-item small {
+    color: #666;
+}
+
+.experience-item{
+
+    margin-bottom:26px;
+
+    page-break-inside:avoid;
+
+    break-inside:avoid;
+
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.experience-header span {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+.experience-item h5 {
+    margin: 8px 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.experience-item p {
+    margin: 5px 0;
+}
+
+.experience-item small {
+    color: #666;
+}
+
+.project-item{
+
+    margin-bottom:22px;
+
+    page-break-inside:avoid;
+
+    break-inside:avoid;
+
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.project-tech {
+    color: #2563eb;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.project-item p {
+    margin: 5px 0;
+}
+
+.skills-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-badge {
+    background: #2563eb;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.certificate-item {
+    margin-bottom: 24px;
+}
+
+.certificate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.certificate-header h4 {
+    margin: 0;
+}
+
+.certificate-header span {
+    color: #666;
+    font-size: 14px;
+}
+
+.language-item {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.skills-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.resume-section{
+
+    page-break-inside:avoid;
+
+    break-inside:avoid;
+
+}
+
+.certification-item{
+
+    page-break-inside:avoid;
+
+    break-inside:avoid;
+
+}
+
+.language-item{
+
+    page-break-inside:avoid;
+
+    break-inside:avoid;
+
+}
+
 /* Tablet */
 
 @media (max-width: 1200px) {
@@ -91,6 +303,7 @@
         padding: 40px;
     }
 }
+
 
 /* Mobile */
 
@@ -114,4 +327,332 @@
     .resume-paper h2 {
         font-size: 18px;
     }
+}
+
+@media print{
+
+.resume-paper{
+
+margin:0;
+
+padding:15mm;
+
+box-shadow:none;
+
+}
+
+}
+
+/* ===========================
+   PROFESSIONAL HEADER
+=========================== */
+
+.resume-header{
+
+    text-align:center;
+
+    border-bottom:3px solid #2563eb;
+
+    padding-bottom:22px;
+
+    margin-bottom:30px;
+
+}
+
+.resume-header h1{
+
+    margin:0;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.resume-header h3{
+
+    margin-top:8px;
+
+    color:#2563eb;
+
+    font-weight:500;
+
+    font-size:22px;
+
+}
+
+.contact-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px 28px;
+
+    margin-top:18px;
+
+}
+
+.contact-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:14px;
+
+    color:#4b5563;
+
+}
+
+.summary-text{
+
+    text-align:justify;
+
+    line-height:1.8;
+
+}
+
+.resume-section{
+
+    margin-top:28px;
+
+}
+
+/* ===========================
+   EDUCATION
+=========================== */
+
+.education-item{
+
+    margin-bottom:26px;
+
+}
+
+.education-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.education-header h4{
+
+    margin:0;
+
+    font-size:18px;
+
+    color:#111827;
+
+}
+
+.education-header h5{
+
+    margin-top:6px;
+
+    font-size:16px;
+
+    color:#374151;
+
+    font-weight:500;
+
+}
+
+.date{
+
+    font-weight:600;
+
+    color:#2563eb;
+
+    white-space:nowrap;
+
+}
+
+.branch{
+
+    margin-top:10px;
+
+}
+
+.cgpa{
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   EXPERIENCE
+=========================== */
+
+.experience-item{
+
+    margin-bottom:30px;
+
+}
+
+.experience-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.experience-header h4{
+
+    margin:0;
+
+    font-size:18px;
+
+}
+
+.experience-header h5{
+
+    margin-top:6px;
+
+    font-size:16px;
+
+    color:#374151;
+
+    font-weight:500;
+
+}
+
+.company-location{
+
+    margin-top:8px;
+
+    color:#6b7280;
+
+}
+
+.employment{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.experience-description{
+
+    margin-top:14px;
+
+    padding-left:22px;
+
+}
+
+.experience-description li{
+
+    margin-bottom:8px;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.project-item{
+    margin-bottom:28px;
+}
+
+.project-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.project-header h4{
+    margin:0;
+    font-size:18px;
+}
+
+.project-tech{
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills-preview{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-badge{
+    background:#2563eb;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ===========================
+   CERTIFICATES
+=========================== */
+
+.certificate-item{
+    margin-bottom:24px;
+}
+
+.certificate-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.certificate-header h4{
+    margin:0;
+}
+
+.certificate-header p{
+    margin-top:5px;
+}
+
+/* ===========================
+   LANGUAGES
+=========================== */
+
+.language-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:8px 0;
+
+    border-bottom:1px solid #eee;
+}
+
+.language-level{
+    color:#2563eb;
+    font-weight:600;
 }

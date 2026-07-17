@@ -1,26 +1,24 @@
 import mongoose from "mongoose";
 
-/* ===========================
-   Personal Information
-=========================== */
 const personalInfoSchema = new mongoose.Schema(
   {
-    firstName: {
+    profileImage: {
       type: String,
-      trim: true,
       default: "",
     },
 
-    lastName: {
+    fullName: {
       type: String,
-      trim: true,
+      default: "",
+    },
+
+    title: {
+      type: String,
       default: "",
     },
 
     email: {
       type: String,
-      trim: true,
-      lowercase: true,
       default: "",
     },
 
@@ -29,7 +27,22 @@ const personalInfoSchema = new mongoose.Schema(
       default: "",
     },
 
-    profession: {
+    location: {
+      type: String,
+      default: "",
+    },
+
+    linkedin: {
+      type: String,
+      default: "",
+    },
+
+    github: {
+      type: String,
+      default: "",
+    },
+
+    website: {
       type: String,
       default: "",
     },
@@ -38,119 +51,85 @@ const personalInfoSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-
-    profileImage: {
-      type: String,
-      default: "",
-    },
-
-    address: {
-      type: String,
-      default: "",
-    },
-
-    city: {
-      type: String,
-      default: "",
-    },
-
-    state: {
-      type: String,
-      default: "",
-    },
-
-    country: {
-      type: String,
-      default: "",
-    },
-
-    postalCode: {
-      type: String,
-      default: "",
-    },
-
-    socialLinks: {
-      linkedin: {
-        type: String,
-        default: "",
-      },
-
-      github: {
-        type: String,
-        default: "",
-      },
-
-      portfolio: {
-        type: String,
-        default: "",
-      },
-
-      leetcode: {
-        type: String,
-        default: "",
-      },
-
-      codechef: {
-        type: String,
-        default: "",
-      },
-
-      codeforces: {
-        type: String,
-        default: "",
-      },
-
-      hackerrank: {
-        type: String,
-        default: "",
-      },
-
-      behance: {
-        type: String,
-        default: "",
-      },
-
-      dribbble: {
-        type: String,
-        default: "",
-      },
-
-      youtube: {
-        type: String,
-        default: "",
-      },
-
-      other: [
-        {
-          platform: String,
-          url: String,
-        },
-      ],
-    },
   },
   {
     _id: false,
   }
 );
 
-/* ===========================
-   Resume Schema
-=========================== */
+const educationSchema = new mongoose.Schema(
+  {
+    college: String,
+    degree: String,
+    branch: String,
+    cgpa: String,
+    startYear: String,
+    endYear: String,
+  },
+  { _id: false }
+);
+
+const experienceSchema = new mongoose.Schema(
+  {
+    jobTitle: String,
+    company: String,
+    location: String,
+    employmentType: String,
+    startDate: String,
+    endDate: String,
+    current: Boolean,
+    description: String,
+  },
+  { _id: false }
+);
+
+const projectSchema = new mongoose.Schema(
+  {
+    projectName: String,
+    description: String,
+    github: String,
+    liveDemo: String,
+    technologies: String,
+  },
+  { _id: false }
+);
+
+const skillSchema = new mongoose.Schema(
+  {
+    name: String,
+  },
+  { _id: false }
+);
+
+const certificationSchema = new mongoose.Schema(
+  {
+    certificateName: String,
+    organization: String,
+    issueDate: String,
+    credentialUrl: String,
+  },
+  { _id: false }
+);
+
+const languageSchema = new mongoose.Schema(
+  {
+    language: String,
+    level: String,
+  },
+  { _id: false }
+);
 
 const resumeSchema = new mongoose.Schema(
   {
-    // Owner
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
 
-    // Resume Metadata
     title: {
       type: String,
-      required: true,
-      trim: true,
+      default: "Untitled Resume",
     },
 
     template: {
@@ -160,17 +139,27 @@ const resumeSchema = new mongoose.Schema(
 
     status: {
       type: String,
-      enum: ["draft", "completed", "archived"],
+      enum: ["draft", "completed"],
       default: "draft",
     },
 
     personalInfo: personalInfoSchema,
+
+    education: [educationSchema],
+
+    experience: [experienceSchema],
+
+    projects: [projectSchema],
+
+    skills: [skillSchema],
+
+    certifications: [certificationSchema],
+
+    languages: [languageSchema],
   },
   {
     timestamps: true,
   }
 );
 
-const Resume = mongoose.model("Resume", resumeSchema);
-
-export default Resume;
+export default mongoose.model("Resume", resumeSchema);

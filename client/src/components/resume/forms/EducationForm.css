@@ -1,0 +1,59 @@
+.education-form {
+    padding: 35px;
+}
+
+.education-form h2 {
+    margin-bottom: 25px;
+}
+
+.education-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-color);
+    color: var(--text-color);
+}
+
+.education-row {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    font-size: 15px;
+}
+
+.education-list {
+    margin-top: 30px;
+}
+
+.education-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--card-color);
+}
+
+.delete-btn {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}

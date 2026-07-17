@@ -1,0 +1,83 @@
+.not-found{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--bg-color);
+    padding:40px 20px;
+}
+
+.not-found-card{
+    max-width:700px;
+    width:100%;
+    text-align:center;
+}
+
+.not-found-image{
+    width:100%;
+    max-width:420px;
+    margin-bottom:25px;
+}
+
+.not-found h1{
+    font-size:80px;
+    font-weight:800;
+    color:#2563eb;
+    margin:0;
+}
+
+.not-found h2{
+    font-size:42px;
+    margin:10px 0;
+    color:var(--text-color);
+}
+
+.not-found p{
+    font-size:22px;
+    color:var(--text-color);
+    margin-top:15px;
+}
+
+.sub-text{
+    font-size:17px !important;
+    color:#64748b !important;
+    margin-top:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 30px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.not-found-image{
+    max-width:300px;
+}
+
+.not-found h1{
+    font-size:60px;
+}
+
+.not-found h2{
+    font-size:30px;
+}
+
+.not-found p{
+    font-size:18px;
+}
+
+}

@@ -1,0 +1,55 @@
+.skills-form{
+    padding:35px;
+}
+
+.skills-form h2{
+    margin-bottom:25px;
+}
+
+.skill-input{
+    display:flex;
+    gap:12px;
+}
+
+.skill-input input{
+    flex:1;
+    padding:12px;
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    background:var(--card-color);
+    color:var(--text-color);
+}
+
+.skill-input button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+}
+
+.skills-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:30px;
+}
+
+.skill-chip{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#2563eb;
+    color:white;
+    padding:8px 14px;
+    border-radius:30px;
+}
+
+.skill-chip button{
+    border:none;
+    background:none;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+}

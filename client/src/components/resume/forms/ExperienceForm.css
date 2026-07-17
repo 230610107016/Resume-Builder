@@ -1,0 +1,66 @@
+.experience-form {
+    padding: 35px;
+}
+
+.experience-form h2 {
+    margin-bottom: 25px;
+}
+
+.experience-form input,
+.experience-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-color);
+    color: var(--text-color);
+}
+
+.experience-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.experience-list {
+    margin-top: 30px;
+}
+
+.experience-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 15px;
+}
+
+.delete-btn {
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}

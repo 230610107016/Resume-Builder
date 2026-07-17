@@ -25,9 +25,31 @@ const sections = [
     id: "skills",
     label: "🛠 Skills",
   },
+  {
+    id: "certifications",
+    label: "📜 Certifications",
+  },
+  {
+    id: "languages",
+    label: "🗣 Languages",
+  },
 ];
 
-const ResumeSidebar = ({ activeSection, setActiveSection }) => {
+const ResumeSidebar = ({ activeSection, setActiveSection, data,}) => {
+  const totalSections = 7;
+
+  let completed = 0;
+
+  if (data.personal.fullName && data.personal.email) completed++;
+  if (data.education.length > 0) completed++;
+  if (data.experience.length > 0) completed++;
+  if (data.projects.length > 0) completed++;
+  if (data.skills.length > 0) completed++;
+  if (data.certifications.length > 0) completed++;
+  if (data.languages.length > 0) completed++;
+
+  const completion = Math.round((completed / totalSections) * 100);
+
   return (
     <aside className="resume-sidebar">
       <h2>Resume Builder</h2>
@@ -46,14 +68,17 @@ const ResumeSidebar = ({ activeSection, setActiveSection }) => {
         ))}
       </ul>
 
-      <div className="completion">
-        <h4>Completion</h4>
+      <div className="completion-box">
+        <h3>Completion</h3>
 
-        <div className="progress">
-          <div className="progress-fill"></div>
+        <div className="progress-bar">
+          <div
+            className="progress-fill"
+            style={{ width: `${completion}%` }}
+          ></div>
         </div>
 
-        <span>0%</span>
+        <p>{completion}% Completed</p>
       </div>
     </aside>
   );
