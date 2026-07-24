@@ -7,7 +7,7 @@
 
   padding: 0 35px;
 
-  background:#0F172A;
+  background:var(--bg-color);
 
   border-bottom: 1px solid var(--border-color);
 
@@ -252,3 +252,4 @@
   }
 
 }
+
